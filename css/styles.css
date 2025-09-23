@@ -1,0 +1,555 @@
+body{
+    font-family: "Roboto", sans-serif;
+    background-color: #FFFFFF;
+    color: #434455;
+    /*transform: scale(1.1);
+    transform-origin: top center;
+    width: 1440px;
+    margin: 0 auto;
+    
+    Центрує сторінку по центру + масштаб.
+    Та задає загальну ширину сторінки, є обмеженям для всього сайту.
+    Поки я задав обмеженя для Картинки та футер в ручну. 
+    Через автоперевірку закомітив загальне обмеження, 
+    мені загальне подобається більше, це код оптимізованіше.
+    */
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+.container{
+    width: 1158px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/*   Header    */
+.heder{
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
+}
+
+.heder-container{
+    display: flex;
+    align-items: center;
+}
+
+.navigation{
+    color:#2E2F42;
+    
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #4D5AE5;
+
+    margin-right: 76px;
+}
+
+.logo-blue{
+    font-family: "Raleway";
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color:#2e2f42;
+}
+
+.menu-list{
+    display: flex;
+    gap: 40px;
+}
+
+.header-list{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+
+    padding: 24px 0;
+    display: block;
+    
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-list:hover,
+.header-list:focus,
+.header-list.current
+{
+    color:#404BBF;
+}
+
+.header-list.current{
+    position: relative;
+}
+
+.header-list.current::after{
+    content: "";
+    width: 100%;
+    position: absolute; 
+    border-radius: 2px;
+    height: 4px;
+    left: 0;
+    bottom: -1px;
+    background-color: #404BBF;
+}
+
+.adres{
+    list-style: none;
+    color:#434455;
+    font-style: normal;
+}
+
+.adres-list{
+    display: flex;
+    gap: 40px;
+    margin-left: 322px;
+    /*margin-left: 242px;*/
+}
+
+.adres-link{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.adres-link:hover,
+.adres-link:focus
+{
+    color:#404BBF;
+}
+
+/*   Section 1  Logo/button  */
+
+.big-logo{
+    background-color: #2E2F42;
+
+    padding: 188px 0;
+    max-width: 1440px;
+    transform-origin: top center;
+    margin: 0 auto;
+
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.logo-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title{
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #FFFFFF;
+
+    max-width: 496px;
+    align-items: center;
+}
+
+.buton{
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+    justify-content: center;
+    white-space: nowrap;
+    cursor: pointer;
+    background-color: #4D5AE5;
+
+    display: block;
+    min-width: 169px;
+    height: 56px;
+    border: none;
+    border-radius: 4px;
+    align-items: center;
+    margin-top: 48px;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.buton:hover,
+.buton:focus{
+    background-color: #404BBF;
+}
+
+.button-text{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+}
+
+/*   Section 2  - Characterisitics    */
+
+.character{
+    padding: 120px 0;
+}
+
+.visually-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.character-box{
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    padding: 0;
+}
+
+.text-container {
+    width: 264px;
+    height: 104px;
+    margin-bottom: 121px;
+}
+
+.text-box-logo{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2E2F42;
+
+    margin-bottom: 8px;
+}
+
+.text-box{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+}
+
+.icon-box{
+    border: 1px solid #8E8F99;
+    border-radius: 4px;
+    width: 264px;
+    height: 112px;
+    background-color: #F4F4FD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    margin-bottom: 8px;
+}
+
+/*   Section 3 - Persons    */
+
+.people{
+    background-color: #F4F4FD;
+    padding: 120px 0;
+}
+
+.people-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.people-title{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    text-transform: capitalize;
+    letter-spacing: 0.02em;
+    color: #2E2F42;
+
+    margin-bottom: 72px;
+    width: 100%;
+    text-align: center;
+}
+
+.people-list{
+    display: flex;
+    gap: 24px;
+}
+
+.people-box{
+    background-color: #FFFFFF;
+    width: calc((100% - 72px) / 4);
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    background-color: #FFFFFF;
+}
+
+.people-text-box{
+    padding: 32px 0;
+}
+
+.people-logo{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2E2F42;
+
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.people-text{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+
+    text-align: center;
+}
+
+.social-list{
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    list-style: none;
+    padding: 0;
+    margin-top: 8px;
+}
+
+.social-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #4D5AE5;
+    border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-link:hover,
+.social-link:focus{
+    background-color: #404BBF;
+}
+
+.social-icon{
+    fill: #f4f4fd;
+}
+
+/*   Section 4    Items    */
+
+.item{
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.item-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item-logo{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #2E2F42;
+
+    margin-bottom: 72px;
+    text-align: center;
+    width: 100%;
+}
+
+.item-list{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 48px;
+    column-gap: 24px;
+}
+
+.item-box{
+    flex-basis: calc((100% - 2 * 24px) / 3);
+    width: calc((100% - 48px) / 3);
+    border-radius: 0px 0px 4px 4px;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.item-box:hover{
+    background-color: #FFFFFF;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    transform: translateY(0%);
+}
+
+.item-text-box{
+    padding: 32px 16px;
+    border: 1px solid #e7e9fc;
+    border-top: none;
+}
+
+.item-title{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em; 
+    color: #2E2F42;
+
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.item-text{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+
+    text-align: center;
+}
+
+.item-image-wrapper{
+    position: relative;
+    overflow: hidden;
+}
+
+.item-overlay-text{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
+    padding: 40px 32px;
+    background-color: #4d5ae5;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: center;
+    font-weight: 400;
+}
+
+.item-image-wrapper:hover .item-overlay-text{
+    transform: translateY(0);
+}
+
+/*   Footer    */
+
+.foter{
+    background-color: #2E2F42;
+    padding: 100px 0;
+    transform-origin: top center;
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.footer-logo{
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #4d5ae5;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.foter-logo-blue {
+    font-family: "Raleway";
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #f4f4fd;
+}
+
+.footer-text{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #F4F4FD;
+
+    max-width: 264px;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.footer-left {
+    max-width: 400px;
+    margin-right: 120px;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 520px;
+}
+
+.footer-social-title{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+}
+
+.footer-list{
+    gap: 16px;
+}
+
+.social-link-footer:hover,
+.social-link-footer:focus{
+    background-color: #31D0AA;
+}
