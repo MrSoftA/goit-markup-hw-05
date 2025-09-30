@@ -663,8 +663,17 @@ img{
     align-items: center;
 }
 
+.form-button:hover{
+    border: none;
+    background-color: #404BBF;
+}
+
 .form-icon{
     fill: #2E2F42;
+}
+
+.form-button:hover .form-icon{
+    fill: #FFFFFF;
 }
 
 .form-text{
@@ -680,4 +689,50 @@ img{
     position: absolute;
     top: 72px;
     left: 24px;
+}
+
+.form{
+
+}
+
+.form-field{
+    display: flex;
+    flex-direction: column;
+    margin-left: 24px;
+    margin-top: 8px;
+}
+
+.form-field-first{
+    margin-top: 112px;
+}
+
+.form-label{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16667;
+    letter-spacing: 0.04em;
+    color: #8E8F99;
+    margin-bottom: 4px;
+}
+
+.form-input-wrapper{
+    position: relative;
+}
+
+.form-input{
+    border: 1px solid #8E8F99; /*#4D5AE5 Focus*/
+    outline: none;
+    border-radius: 4px;
+    width: 360px;
+    height: 40px;
+    background-color: #FCFCFC;
+    padding-left: 38px;
+}
+
+.input-icon{
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    pointer-events: none;
 }
