@@ -692,13 +692,15 @@ img{
 }
 
 .form{
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .form-field{
     display: flex;
     flex-direction: column;
-    margin-left: 24px;
+    margin-left: 0;
     margin-top: 8px;
 }
 
@@ -735,4 +737,24 @@ img{
     left: 16px;
     transform: translateY(-50%);
     pointer-events: none;
+    fill: #2E2F42;
+}
+
+.form-textarea{
+    border: 1px solid #8E8F99;
+    border-radius: 4px;
+    outline: none;
+    width: 360px;
+    height: 120px;
+    background-color: #FCFCFC;
+    padding-left: 16px;
+}
+
+.form-textarea::placeholder{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16667;
+    letter-spacing: 0.04em;
+    color: #8E8F99;
+    padding-top: 8px;
 }
